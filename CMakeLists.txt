@@ -20,7 +20,7 @@ set(CMAKE_C_STANDARD 99)
 add_library(${MOD_ID} SHARED src/height.c src/biome.c)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/splugins/include)
-find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib)
+find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib REQUIRED)
 target_link_libraries(${MOD_ID} ${SP_LIBRARY})
 
 configure_file(modInfo.lua "${CMAKE_CURRENT_BINARY_DIR}/${MOD_ID}/modInfo.lua" @ONLY)
