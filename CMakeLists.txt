@@ -21,9 +21,17 @@ add_library(${MOD_ID} SHARED src/height.c src/biome.c)
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/splugins/include)
 find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib REQUIRED)
+mark_as_advanced(SP_LIBRARY)
 target_link_libraries(${MOD_ID} ${SP_LIBRARY})
 
 configure_file(modInfo.lua "${CMAKE_CURRENT_BINARY_DIR}/${MOD_ID}/modInfo.lua" @ONLY)
+cmake_path(GET PREVIEW_FILE FILENAME _preview_filename)
+cmake_path(ABSOLUTE_PATH PREVIEW_FILE)
+add_custom_command(TARGET ${MOD_ID} POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${PREVIEW_FILE}
+        ${CMAKE_CURRENT_BINARY_DIR}/${MOD_ID}/${_preview_filename}
+        DEPENDS ${PREVIEW_FILE})
 add_custom_command(TARGET ${MOD_ID} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "$<TARGET_FILE:${MOD_ID}>"
