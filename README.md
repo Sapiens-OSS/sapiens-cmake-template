@@ -30,5 +30,6 @@ cmake --build .
 - **MOD_MAJOR_VERSION** Major version of the mod (Combined with the following variables as MAJOR.MINOR.PATCH)
 - **MOD_MINOR_VERSION** Minor version of the mod
 - **MOD_PATCH_VERSION** Patch version of the mod
-- **AUTO_GENERATE_SAPIENS_MOD_SYMLINK** When ON will attempt to generate a symlink in the default mod folder to the generated build files for easy debugging
+- **SAPIENS_MOD_DIRECTORY** The mod directory in the sapiens folder. Defaults on windows to `%AppData%\majicjungle\sapiens\mods\`
+- **AUTO_COPY_MOD** When ON will attempt to copy the mod to the SAPIENS_MOD_DIRECTORY
 - **MOD_TYPE** ADVANCED setting to change the mod type, C mods should always be the default world type but can be set to app using this.
