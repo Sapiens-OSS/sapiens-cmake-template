@@ -31,7 +31,10 @@ if (WIN32)
     find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib REQUIRED)
 elseif (UNIX)
     find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib REQUIRED NO_CMAKE_FIND_ROOT_PATH)
-    
+else ()
+    message(FATAL_ERROR "Only supports Windows, macOS and Linux")
+endif ()
+
 mark_as_advanced(SP_LIBRARY) # Change SP_LIBRARY only if you want to use a custom compiled version of the sapiens plugin library, eg when the public repo is outdated.
 target_link_libraries(${MOD_ID} ${SP_LIBRARY})
 
