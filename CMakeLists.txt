@@ -26,9 +26,9 @@ add_library(${MOD_ID} SHARED ${_SOURCES})
 # ==================== DO NOT CHANGE ANYTHING BELOW THIS LINE ====================
 
 # Include sapiens headers and libraries
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/splugins/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/splugins/include)
 
-find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib REQUIRED NO_CMAKE_FIND_ROOT_PATH)
+find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/libs/splugins/lib REQUIRED NO_CMAKE_FIND_ROOT_PATH)
 mark_as_advanced(SP_LIBRARY) # Change SP_LIBRARY only if you want to use a custom compiled version of the sapiens plugin library, eg when the public repo is outdated.
 target_link_libraries(${MOD_ID} ${SP_LIBRARY})
 
