@@ -14,6 +14,10 @@
 # EXTERNAL cache entries
 ########################
 
+//When ON attempt to copy the mod to the sapiens mod directory.
+// THIS DELETES ALL FILES IN THE TARGET DIRECTORY.
+AUTO_COPY_MOD:BOOL=ON
+
 //No help, variable specified on the command line.
 BUILD_SHARED_LIBS:BOOL=ON
 
@@ -286,8 +290,12 @@ PREVIEW_FILE:FILEPATH=/home/nmattela/Documents/sapiens-cmake-template/preview.pn
 //host path for Qt
 QT_HOST_PATH:PATH=/usr
 
+//The directory sapiens loads mods from. THIS DELETES ALL FILES
+// IN THE TARGET DIRECTORY.
+SAPIENS_MOD_DIRECTORY:PATH=/mnt/LinuxHDD/SteamLibrary/steamapps/compatdata/1060230/pfx/drive_c/users/steamuser/AppData/Roaming/majicjungle/sapiens/mods
+
 //Path to a library.
-SP_LIBRARY:FILEPATH=SP_LIBRARY-NOTFOUND
+SP_LIBRARY:FILEPATH=/home/nmattela/Documents/sapiens-cmake-template/splugins/lib/SPCommon.lib
 
 
 ########################
@@ -446,6 +454,8 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: MOD_TYPE
 MOD_TYPE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: SP_LIBRARY
+SP_LIBRARY-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 

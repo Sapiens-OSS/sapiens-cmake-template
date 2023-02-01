@@ -27,14 +27,8 @@ add_library(${MOD_ID} SHARED ${_SOURCES})
 
 # Include sapiens headers and libraries
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/splugins/include)
-if (WIN32)
-    find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib REQUIRED)
-elseif (UNIX)
-    find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib REQUIRED NO_CMAKE_FIND_ROOT_PATH)
-else ()
-    message(FATAL_ERROR "Only supports Windows, macOS and Linux")
-endif ()
 
+find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib REQUIRED NO_CMAKE_FIND_ROOT_PATH)
 mark_as_advanced(SP_LIBRARY) # Change SP_LIBRARY only if you want to use a custom compiled version of the sapiens plugin library, eg when the public repo is outdated.
 target_link_libraries(${MOD_ID} ${SP_LIBRARY})
 
@@ -63,7 +57,7 @@ set(AUTO_COPY_MOD OFF CACHE BOOL "When ON attempt to copy the mod to the sapiens
 set(SAPIENS_MOD_DIRECTORY "" CACHE PATH "The directory sapiens loads mods from. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
 
 if (AUTO_COPY_MOD)
-    if (NOT SAPIENS_MOD_DIRECTORY)
+    if ("${SAPIENS_MOD_DIRECTORY}" STREQUAL "")
         message(STATUS "No Sapiens directory is set, looking for one at default locations.")
         if (WIN32)
             set(_copy_dest "$ENV{APPDATA}\\majicjungle\\sapiens\\mods\\")
@@ -75,7 +69,7 @@ if (AUTO_COPY_MOD)
                 message(STATUS "Could not find Sapiens directory at ${_copy_dest}. Please verify where you installed Sapiens, and manually specify the path")
             endif ()
         elseif (UNIX)
-            set(_copy_dest "${HOME}/.steam/steam/steamapps/compatdata/1060230/pfx/drive_c/users/steamuser/AppData/Roaming/majicjungle/sapiens/mods/")
+            set(_copy_dest "$ENV{HOME}/.steam/steam/steamapps/compatdata/1060230/pfx/drive_c/users/steamuser/AppData/Roaming/majicjungle/sapiens/mods/")
             if (EXISTS ${_copy_dest})
                 message(STATUS "Found Sapiens directory at ${_copy_dest}")
                 set(SAPIENS_MOD_DIRECTORY "${_copy_dest}" CACHE PATH "The directory Sapiens loads mods from." FORCE)
@@ -88,7 +82,7 @@ if (AUTO_COPY_MOD)
     endif ()
     if (EXISTS ${SAPIENS_MOD_DIRECTORY})
         set(_mod_target_dir "${SAPIENS_MOD_DIRECTORY}/${MOD_ID}")
-        message(STATUS "Mod will be copied from '${_mod_dir}' to '${_mod_dir}'")
+        message(STATUS "Mod will be copied from '${_mod_dir}' to '${_mod_target_dir}'")
         message(WARNING "${_mod_target_dir} will be recursively deleted and recreated if it already exists.")
 
         add_custom_target(copy_mod
@@ -101,8 +95,10 @@ if (AUTO_COPY_MOD)
                 DEPENDS ${MOD_ID}
                 COMMENT "Copying mod to sapiens mod directory.")
 
+
         add_custom_target(run_game
                 COMMAND steam "steam://rungameid/1060230")
+                
         add_dependencies(run_game copy_mod)
     else ()
         message(FATAL_ERROR "Sapiens mod directory not found.")

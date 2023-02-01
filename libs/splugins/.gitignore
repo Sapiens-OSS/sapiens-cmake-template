@@ -1,0 +1,18 @@
+*.suo
+*.user
+*.sln.docstates
+
+ipch/
+*.VC.db
+
+Intermediate
+Build
+build
+SPVanilla/Linux/lib
+
+workshop.mjl
+
+## User settings
+xcuserdata/
+*.xcworkspacedata
+.DS_Store

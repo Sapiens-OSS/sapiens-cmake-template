@@ -14,12 +14,12 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is GNU, found in "/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/3.25.1/CompilerIdC/a.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-UroN4n
+Change Dir: /home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-ge3YBa
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_8b836/fast && /usr/bin/make  -f CMakeFiles/cmTC_8b836.dir/build.make CMakeFiles/cmTC_8b836.dir/build
-make[1]: Entering directory '/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-UroN4n'
-Building C object CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj
-/usr/bin/x86_64-w64-mingw32-gcc   -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fno-plt -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection    -v -o CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cc3b2/fast && /usr/bin/make  -f CMakeFiles/cmTC_cc3b2.dir/build.make CMakeFiles/cmTC_cc3b2.dir/build
+make[1]: Entering directory '/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-ge3YBa'
+Building C object CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj
+/usr/bin/x86_64-w64-mingw32-gcc   -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fno-plt -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection    -v -o CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/x86_64-w64-mingw32-gcc
 Target: x86_64-w64-mingw32
@@ -27,9 +27,9 @@ Configured with: /build/mingw-w64-gcc/src/gcc/configure --prefix=/usr --libexecd
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8b836.dir/'
- /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/cc1 -quiet -v -D_REENTRANT -D _FORTIFY_SOURCE=2 -D _GLIBCXX_ASSERTIONS /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_8b836.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -O2 -Wformat=1 -version -fno-plt -fexceptions -fcf-protection=full --param=ssp-buffer-size=4 -o - |
- /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as -v -o CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj
+COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cc3b2.dir/'
+ /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/cc1 -quiet -v -D_REENTRANT -D _FORTIFY_SOURCE=2 -D _GLIBCXX_ASSERTIONS /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_cc3b2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -O2 -Wformat=1 -version -fno-plt -fexceptions -fcf-protection=full --param=ssp-buffer-size=4 -o - |
+ /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as -v -o CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj
 GNU assembler version 2.38 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.38
 GNU C17 (GCC) version 12.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 12.2.0, GMP version 6.2.1, MPFR version 4.1.0-p13, MPC version 1.2.1, isl version isl-0.25-GMP
@@ -53,12 +53,12 @@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: a439a4b6b1c3072966986d393b429811
 COMPILER_PATH=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/
-COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.'
-Linking C executable cmTC_8b836.exe
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b836.dir/link.txt --verbose=1
-/usr/bin/cmake -E rm -f CMakeFiles/cmTC_8b836.dir/objects.a
-/usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_8b836.dir/objects.a @CMakeFiles/cmTC_8b836.dir/objects1
-/usr/bin/x86_64-w64-mingw32-gcc -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fno-plt -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection  -Wl,-O1,--sort-common,--as-needed -fstack-protector -v -Wl,--whole-archive CMakeFiles/cmTC_8b836.dir/objects.a -Wl,--no-whole-archive -o cmTC_8b836.exe -Wl,--out-implib,libcmTC_8b836.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.'
+Linking C executable cmTC_cc3b2.exe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc3b2.dir/link.txt --verbose=1
+/usr/bin/cmake -E rm -f CMakeFiles/cmTC_cc3b2.dir/objects.a
+/usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_cc3b2.dir/objects.a @CMakeFiles/cmTC_cc3b2.dir/objects1
+/usr/bin/x86_64-w64-mingw32-gcc -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fno-plt -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection  -Wl,-O1,--sort-common,--as-needed -fstack-protector -v -Wl,--whole-archive CMakeFiles/cmTC_cc3b2.dir/objects.a -Wl,--no-whole-archive -o cmTC_cc3b2.exe -Wl,--out-implib,libcmTC_cc3b2.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/x86_64-w64-mingw32-gcc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper
@@ -69,10 +69,10 @@ Supported LTO compression algorithms: zlib zstd
 gcc version 12.2.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/
-COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_8b836.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8b836.'
- /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/collect2 -plugin /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0mSmuR.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_8b836.exe /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed --whole-archive CMakeFiles/cmTC_8b836.dir/objects.a --no-whole-archive --out-implib libcmTC_8b836.dll.a --major-image-version 0 --minor-image-version 0 -lssp_nonshared -lssp -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_8b836.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8b836.'
-make[1]: Leaving directory '/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-UroN4n'
+COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_cc3b2.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cc3b2.'
+ /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/collect2 -plugin /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBJv5uu.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_cc3b2.exe /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed --whole-archive CMakeFiles/cmTC_cc3b2.dir/objects.a --no-whole-archive --out-implib libcmTC_cc3b2.dll.a --major-image-version 0 --minor-image-version 0 -lssp_nonshared -lssp -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o
+COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_cc3b2.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cc3b2.'
+make[1]: Leaving directory '/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-ge3YBa'
 
 
 
@@ -91,12 +91,12 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(x86_64-w64-mingw32-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-UroN4n]
+  ignore line: [Change Dir: /home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-ge3YBa]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_8b836/fast && /usr/bin/make  -f CMakeFiles/cmTC_8b836.dir/build.make CMakeFiles/cmTC_8b836.dir/build]
-  ignore line: [make[1]: Entering directory '/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-UroN4n']
-  ignore line: [Building C object CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj]
-  ignore line: [/usr/bin/x86_64-w64-mingw32-gcc   -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fno-plt -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection    -v -o CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/usr/bin/make -f Makefile cmTC_cc3b2/fast && /usr/bin/make  -f CMakeFiles/cmTC_cc3b2.dir/build.make CMakeFiles/cmTC_cc3b2.dir/build]
+  ignore line: [make[1]: Entering directory '/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/CMakeScratch/TryCompile-ge3YBa']
+  ignore line: [Building C object CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [/usr/bin/x86_64-w64-mingw32-gcc   -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fno-plt -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection    -v -o CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/x86_64-w64-mingw32-gcc]
   ignore line: [Target: x86_64-w64-mingw32]
@@ -104,9 +104,9 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
   ignore line: [gcc version 12.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8b836.dir/']
-  ignore line: [ /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/cc1 -quiet -v -D_REENTRANT -D _FORTIFY_SOURCE=2 -D _GLIBCXX_ASSERTIONS /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_8b836.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -O2 -Wformat=1 -version -fno-plt -fexceptions -fcf-protection=full --param=ssp-buffer-size=4 -o - |]
-  ignore line: [ /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as -v -o CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cc3b2.dir/']
+  ignore line: [ /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/cc1 -quiet -v -D_REENTRANT -D _FORTIFY_SOURCE=2 -D _GLIBCXX_ASSERTIONS /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_cc3b2.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -O2 -Wformat=1 -version -fno-plt -fexceptions -fcf-protection=full --param=ssp-buffer-size=4 -o - |]
+  ignore line: [ /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/as -v -o CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj]
   ignore line: [GNU assembler version 2.38 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.38]
   ignore line: [GNU C17 (GCC) version 12.2.0 (x86_64-w64-mingw32)]
   ignore line: [	compiled by GNU C version 12.2.0  GMP version 6.2.1  MPFR version 4.1.0-p13  MPC version 1.2.1  isl version isl-0.25-GMP]
@@ -130,12 +130,12 @@ Parsed C implicit link information from above output:
   ignore line: [Compiler executable checksum: a439a4b6b1c3072966986d393b429811]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8b836.dir/CMakeCCompilerABI.c.']
-  ignore line: [Linking C executable cmTC_8b836.exe]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b836.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cmake -E rm -f CMakeFiles/cmTC_8b836.dir/objects.a]
-  ignore line: [/usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_8b836.dir/objects.a @CMakeFiles/cmTC_8b836.dir/objects1]
-  ignore line: [/usr/bin/x86_64-w64-mingw32-gcc -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fno-plt -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection  -Wl -O1 --sort-common --as-needed -fstack-protector -v -Wl --whole-archive CMakeFiles/cmTC_8b836.dir/objects.a -Wl --no-whole-archive -o cmTC_8b836.exe -Wl --out-implib libcmTC_8b836.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-v' '-o' 'CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_cc3b2.dir/CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_cc3b2.exe]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc3b2.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cmake -E rm -f CMakeFiles/cmTC_cc3b2.dir/objects.a]
+  ignore line: [/usr/bin/x86_64-w64-mingw32-ar qc CMakeFiles/cmTC_cc3b2.dir/objects.a @CMakeFiles/cmTC_cc3b2.dir/objects1]
+  ignore line: [/usr/bin/x86_64-w64-mingw32-gcc -D_FORTIFY_SOURCE=2 -D_GLIBCXX_ASSERTIONS -O2 -pipe -fno-plt -fexceptions --param=ssp-buffer-size=4 -Wformat -fcf-protection  -Wl -O1 --sort-common --as-needed -fstack-protector -v -Wl --whole-archive CMakeFiles/cmTC_cc3b2.dir/objects.a -Wl --no-whole-archive -o cmTC_cc3b2.exe -Wl --out-implib libcmTC_cc3b2.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/x86_64-w64-mingw32-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper]
@@ -146,13 +146,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 12.2.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/bin/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/:/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_8b836.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8b836.']
-  link line: [ /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/collect2 -plugin /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0mSmuR.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_8b836.exe /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed --whole-archive CMakeFiles/cmTC_8b836.dir/objects.a --no-whole-archive --out-implib libcmTC_8b836.dll.a --major-image-version 0 --minor-image-version 0 -lssp_nonshared -lssp -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-D' '_FORTIFY_SOURCE=2' '-D' '_GLIBCXX_ASSERTIONS' '-O2' '-pipe' '-fno-plt' '-fexceptions' '--param=ssp-buffer-size=4' '-Wformat=1' '-fcf-protection=full' '-fstack-protector' '-v' '-o' 'cmTC_cc3b2.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cc3b2.']
+  link line: [ /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/collect2 -plugin /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBJv5uu.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_cc3b2.exe /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0 -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib -L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib -O1 --sort-common --as-needed --whole-archive CMakeFiles/cmTC_cc3b2.dir/objects.a --no-whole-archive --out-implib libcmTC_cc3b2.dll.a --major-image-version 0 --minor-image-version 0 -lssp_nonshared -lssp -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 /usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtend.o]
     arg [/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc0mSmuR.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccBJv5uu.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
@@ -176,7 +176,7 @@ Parsed C implicit link information from above output:
     arg [i386pep] ==> ignore
     arg [-Bdynamic] ==> search dynamic
     arg [-o] ==> ignore
-    arg [cmTC_8b836.exe] ==> ignore
+    arg [cmTC_cc3b2.exe] ==> ignore
     arg [/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
     arg [/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-w64-mingw32/12.2.0/crtbegin.o]
     arg [-L/usr/lib/gcc/x86_64-w64-mingw32/12.2.0] ==> dir [/usr/lib/gcc/x86_64-w64-mingw32/12.2.0]
@@ -186,10 +186,10 @@ Parsed C implicit link information from above output:
     arg [--sort-common] ==> ignore
     arg [--as-needed] ==> ignore
     arg [--whole-archive] ==> ignore
-    arg [CMakeFiles/cmTC_8b836.dir/objects.a] ==> ignore
+    arg [CMakeFiles/cmTC_cc3b2.dir/objects.a] ==> ignore
     arg [--no-whole-archive] ==> ignore
     arg [--out-implib] ==> ignore
-    arg [libcmTC_8b836.dll.a] ==> ignore
+    arg [libcmTC_cc3b2.dll.a] ==> ignore
     arg [--major-image-version] ==> ignore
     arg [0] ==> ignore
     arg [--minor-image-version] ==> ignore
