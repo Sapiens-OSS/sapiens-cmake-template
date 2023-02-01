@@ -10,6 +10,6 @@ SPVec4 spHeightGet(SPVec4 previousHeight, //if spReplacesPreviousHeight returns 
                    double riverDistance) {
 
 
-    SPVec4 result = {SP_METERS_TO_PRERENDER(spMax(noiseLoc.x, noiseLoc.y)), riverDistance, 0.0, 0.0};
+    SPVec4 result = {SP_METERS_TO_PRERENDER(-100), riverDistance, 0.0, 0.0};
     return result;
 }

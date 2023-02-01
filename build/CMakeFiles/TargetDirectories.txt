@@ -1,0 +1,5 @@
+/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/MyCMod.dir
+/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/copy_mod.dir
+/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/run_game.dir
+/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/edit_cache.dir
+/home/nmattela/Documents/sapiens-cmake-template/build/CMakeFiles/rebuild_cache.dir
