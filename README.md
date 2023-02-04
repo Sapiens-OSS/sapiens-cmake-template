@@ -29,7 +29,7 @@ cmake --build build/ --target run_game
 ```
 To run and build the game.
 
-If, for any reason, your steam library location changes, or you want to change the ID of your mod, run the following:
+If, for any reason, your build folder was removed, your steam library location changes, or you want to change the ID of your mod, run the following:
 ```
 # Linux users, replace cmake with x86_64-w64-mingw32-cmake
 cmake -DMOD_ID=MyCMod -DAUTO_COPY_MOD=ON -DSAPIENS_MOD_DIRECTORY="/path/to/sapiens/installation/mods/folder" . -B build
