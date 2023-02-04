@@ -1,15 +1,11 @@
 cmake_minimum_required(VERSION 3.23)
 
 set(MOD_ID "SapiensModTemplate" CACHE STRING "Internal mod id, used as name for mod files.")
-set(MOD_NAME "Sapiens Mod Template" CACHE STRING "Name of the mod")
-set(DESCRIPTION "Template for a sapiens c-mod" CACHE STRING "Description of the mod")
-set(DEVELOPER "suppergerrie2" CACHE STRING "Developer of the mod")
-set(DEVELOPER_URL "https://suppergerrie2.com" CACHE STRING "URL of the developer")
 set(PREVIEW_FILE "preview.png" CACHE FILEPATH "Preview image for the mod")
-set(MOD_MAJOR_VERSION 0 CACHE STRING "Major version of the mod")
-set(MOD_MINOR_VERSION 0 CACHE STRING "Minor version of the mod")
-set(MOD_PATCH_VERSION 1 CACHE STRING "Patch version of the mod")
-set(MOD_TYPE "world" CACHE STRING "Type of the mod, can be world or app. Should always be world for c mods.")
+
+# Copy the mod to the game's mods folder
+set(AUTO_COPY_MOD ON CACHE BOOL "When ON attempt to copy the mod to the sapiens mod directory. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
+set(SAPIENS_MOD_DIRECTORY "" CACHE PATH "The directory sapiens loads mods from. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
 
 mark_as_advanced(MOD_TYPE) # Should not be changed for c mods as c mods are used for world specific things only.
 
@@ -52,9 +48,6 @@ add_custom_command(TARGET ${MOD_ID} POST_BUILD
         "$<TARGET_FILE:${MOD_ID}>"
         "${_mod_dir}/lib/$<TARGET_FILE_NAME:${MOD_ID}>")
 
-# Copy the mod to the game's mods folder
-set(AUTO_COPY_MOD OFF CACHE BOOL "When ON attempt to copy the mod to the sapiens mod directory. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
-set(SAPIENS_MOD_DIRECTORY "" CACHE PATH "The directory sapiens loads mods from. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
 
 if (AUTO_COPY_MOD)
     if ("${SAPIENS_MOD_DIRECTORY}" STREQUAL "")

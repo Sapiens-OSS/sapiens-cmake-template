@@ -1,11 +1,11 @@
 local modInfo = {
-    name = "@MOD_NAME@",
-    description = "@DESCRIPTION@",
-    preview = "@PREVIEW_FILE@",
-    version = "@MOD_MAJOR_VERSION@.@MOD_MINOR_VERSION@.@MOD_PATCH_VERSION@",
-    type = "@MOD_TYPE@",
-    developer = "@DEVELOPER@",
-    website = "@DEVELOPER_URL@",
+    name = "MOD_NAME",
+    description = "MOD_DESCRIPTION",
+    preview = "preview.png",
+    version = "0.0.0",
+    type = "MOD_TYPE",
+    developer = "MOD_DEVELOPER",
+    website = "MOD_WEBSITE",
 }
 
 return modInfo 
