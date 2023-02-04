@@ -4,7 +4,7 @@ set(MOD_ID "SapiensModTemplate" CACHE STRING "Internal mod id, used as name for 
 set(PREVIEW_FILE "preview.png" CACHE FILEPATH "Preview image for the mod")
 
 # Copy the mod to the game's mods folder
-set(AUTO_COPY_MOD ON CACHE BOOL "When ON attempt to copy the mod to the sapiens mod directory. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
+set(AUTO_COPY_MOD OFF CACHE BOOL "When ON attempt to copy the mod to the sapiens mod directory. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
 set(SAPIENS_MOD_DIRECTORY "" CACHE PATH "The directory sapiens loads mods from. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
 
 mark_as_advanced(MOD_TYPE) # Should not be changed for c mods as c mods are used for world specific things only.
