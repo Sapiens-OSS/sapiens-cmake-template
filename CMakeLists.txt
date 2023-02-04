@@ -3,6 +3,16 @@ cmake_minimum_required(VERSION 3.23)
 set(MOD_ID "SapiensModTemplate" CACHE STRING "Internal mod id, used as name for mod files.")
 set(PREVIEW_FILE "preview.png" CACHE FILEPATH "Preview image for the mod")
 
+file(READ "modInfo.lua" MODINFO)
+if (MODINFO MATCHES "name[ \t\r\n]*=[ \t\r\n]*\"([^\"]*)\"")
+    string(REGEX REPLACE "[ \t\r\n]" "-" MOD_ID_NO_WHITESPACE "${CMAKE_MATCH_1}")
+    string(REGEX REPLACE "[^a-zA-Z0-9+_\-]" "" MOD_ID "${MOD_ID_NO_WHITESPACE}")
+else ()
+    message(FATAL_ERROR "Could not extract the mod ID from modInfo.lua. Ensure that you have set the `name` property in modInfo.lua to a valid string.")
+endif ()
+
+message(STATUS "Using ${MOD_ID} as ID")
+
 # Copy the mod to the game's mods folder
 set(AUTO_COPY_MOD OFF CACHE BOOL "When ON attempt to copy the mod to the sapiens mod directory. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
 set(SAPIENS_MOD_DIRECTORY "" CACHE PATH "The directory sapiens loads mods from. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
