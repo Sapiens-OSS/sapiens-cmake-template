@@ -9,11 +9,13 @@ A CMake template to make C and Lua mods for the Sapiens game
     3.1. Enter the directory in which a new directory will be created that contains the project
     3.2. Enter the Mod ID. This ID will become the name of the directory it will create
     3.3. Enter the path to your Sapiens installation. This depends on where your Steam library is located, but the default locations are as follows:
+
         | Platform       	| File Path                                                                                                           	|
         |----------------	|---------------------------------------------------------------------------------------------------------------------	|
         | Windows        	| `%AppData%\majicjungle\sapiens\mods`                                                                                	|
         | MacOS          	| ?                                                                                                                   	|
         | Linux (Proton) 	| `~/.steam/steam/steamapps/compatdata/1060230/pfx/drive_c/users/steamuser/AppData/Roaming/majicjungle/sapiens/mods/` 	|
+        
         Note that the extension will attempt to automatically look for an installation folder, but this is a long process with a tendency to crash, and only works on Linux for now. So don't bother waiting for it
     3.4. Enter the name of your mod. This is a string in which you are free to type in anything
     3.5. Enter the description of your mod
