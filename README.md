@@ -27,7 +27,7 @@ A CMake template to make C and Lua mods for the Sapiens game
 
 From thereon out, you can run
 ```
-cmake --build build/ --target run_game
+cmake --build build/ --target sync_mod_files --target run_game
 ```
 To run and build the game.
 
@@ -53,7 +53,7 @@ cmake -DMOD_ID=MyCMod -DAUTO_COPY_MOD=ON -DSAPIENS_MOD_DIRECTORY="/path/to/sapie
 ```
 5. Build the mod, through your IDE or from command line:
 ```
-cmake --build build/ --target run_game
+cmake --build build/ --target sync_mod_files --target run_game
 ```
 6. The final mod folder can be found in the build folder (`./build` in the above commands) and is named as the given mod ID (`MyCMod` in the above commands)
 
