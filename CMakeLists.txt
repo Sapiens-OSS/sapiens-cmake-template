@@ -53,6 +53,36 @@ add_custom_command(TARGET ${MOD_ID} POST_BUILD
         ${_mod_dir}/${_preview_filename}
         DEPENDS ${PREVIEW_FILE})
 
+add_custom_target(sync_mod_files ALL
+        DEPENDS
+        always_rebuild
+)
+
+add_custom_command(
+        OUTPUT always_rebuild
+        COMMAND cmake -E echo "Syncing files from lua/ models/ and localizations/"
+)
+add_dependencies(${MOD_ID} sync_mod_files)
+
+function(sync_directory_on_build directory)
+    cmake_path(ABSOLUTE_PATH directory OUTPUT_VARIABLE _absolute_directory)
+    set(_target "${_mod_dir}/${directory}")
+    message(STATUS "Syncing ${_absolute_directory} to ${_target}")
+    add_custom_command(
+            TARGET sync_mod_files POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E echo "Syncing ${directory}"
+            COMMAND ${CMAKE_COMMAND} -E remove_directory ${_target}
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${_absolute_directory}
+            ${_target}
+            COMMENT "Syncing ${directory}")
+endfunction()
+
+# Copy the localizations, models and scripts to the mod folder
+sync_directory_on_build("localizations")
+sync_directory_on_build("models")
+sync_directory_on_build("scripts")
+
 # Copy the build mod library to the mod folder
 add_custom_command(TARGET ${MOD_ID} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
