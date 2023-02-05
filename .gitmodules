@@ -1,3 +1,3 @@
 [submodule "splugins"]
-	path = splugins
+	path = libs/splugins
 	url = https://github.com/suppergerrie2/splugins.git

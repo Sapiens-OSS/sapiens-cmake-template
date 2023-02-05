@@ -1,15 +1,22 @@
 cmake_minimum_required(VERSION 3.23)
 
 set(MOD_ID "SapiensModTemplate" CACHE STRING "Internal mod id, used as name for mod files.")
-set(MOD_NAME "Sapiens Mod Template" CACHE STRING "Name of the mod")
-set(DESCRIPTION "Template for a sapiens c-mod" CACHE STRING "Description of the mod")
-set(DEVELOPER "suppergerrie2" CACHE STRING "Developer of the mod")
-set(DEVELOPER_URL "https://suppergerrie2.com" CACHE STRING "URL of the developer")
 set(PREVIEW_FILE "preview.png" CACHE FILEPATH "Preview image for the mod")
-set(MOD_MAJOR_VERSION 0 CACHE STRING "Major version of the mod")
-set(MOD_MINOR_VERSION 0 CACHE STRING "Minor version of the mod")
-set(MOD_PATCH_VERSION 1 CACHE STRING "Patch version of the mod")
-set(MOD_TYPE "world" CACHE STRING "Type of the mod, can be world or app. Should always be world for c mods.")
+
+file(READ "modInfo.lua" MODINFO)
+if (MODINFO MATCHES "name[ \t\r\n]*=[ \t\r\n]*\"([^\"]*)\"")
+    string(REGEX REPLACE "[ \t\r\n]" "-" MOD_ID_NO_WHITESPACE "${CMAKE_MATCH_1}")
+    string(REGEX REPLACE "[^a-zA-Z0-9+_\-]" "" MOD_ID_SANITIZED "${MOD_ID_NO_WHITESPACE}")
+    string(TOLOWER "${MOD_ID_SANITIZED}" MOD_ID)
+else ()
+    message(FATAL_ERROR "Could not extract the mod ID from modInfo.lua. Ensure that you have set the `name` property in modInfo.lua to a valid string.")
+endif ()
+
+message(STATUS "Using ${MOD_ID} as ID")
+
+# Copy the mod to the game's mods folder
+set(AUTO_COPY_MOD OFF CACHE BOOL "When ON attempt to copy the mod to the sapiens mod directory. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
+set(SAPIENS_MOD_DIRECTORY "" CACHE PATH "The directory sapiens loads mods from. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
 
 mark_as_advanced(MOD_TYPE) # Should not be changed for c mods as c mods are used for world specific things only.
 
@@ -26,8 +33,9 @@ add_library(${MOD_ID} SHARED ${_SOURCES})
 # ==================== DO NOT CHANGE ANYTHING BELOW THIS LINE ====================
 
 # Include sapiens headers and libraries
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/splugins/include)
-find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/splugins/lib REQUIRED)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs/splugins/include)
+
+find_library(SP_LIBRARY SPCommon PATHS ${CMAKE_CURRENT_SOURCE_DIR}/libs/splugins/lib REQUIRED NO_CMAKE_FIND_ROOT_PATH)
 mark_as_advanced(SP_LIBRARY) # Change SP_LIBRARY only if you want to use a custom compiled version of the sapiens plugin library, eg when the public repo is outdated.
 target_link_libraries(${MOD_ID} ${SP_LIBRARY})
 
@@ -45,35 +53,70 @@ add_custom_command(TARGET ${MOD_ID} POST_BUILD
         ${_mod_dir}/${_preview_filename}
         DEPENDS ${PREVIEW_FILE})
 
+add_custom_target(sync_mod_files ALL
+        DEPENDS
+        always_rebuild
+)
+
+add_custom_command(
+        OUTPUT always_rebuild
+        COMMAND cmake -E echo "Syncing files from lua/ models/ and localizations/"
+)
+add_dependencies(${MOD_ID} sync_mod_files)
+
+function(sync_directory_on_build directory)
+    cmake_path(ABSOLUTE_PATH directory OUTPUT_VARIABLE _absolute_directory)
+    set(_target "${_mod_dir}/${directory}")
+    message(STATUS "Syncing ${_absolute_directory} to ${_target}")
+    add_custom_command(
+            TARGET sync_mod_files POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E echo "Syncing ${directory}"
+            COMMAND ${CMAKE_COMMAND} -E remove_directory ${_target}
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${_absolute_directory}
+            ${_target}
+            COMMENT "Syncing ${directory}")
+endfunction()
+
+# Copy the localizations, models and scripts to the mod folder
+sync_directory_on_build("localizations")
+sync_directory_on_build("models")
+sync_directory_on_build("scripts")
+
 # Copy the build mod library to the mod folder
 add_custom_command(TARGET ${MOD_ID} POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "$<TARGET_FILE:${MOD_ID}>"
         "${_mod_dir}/lib/$<TARGET_FILE_NAME:${MOD_ID}>")
 
-# Copy the mod to the game's mods folder
-set(AUTO_COPY_MOD OFF CACHE BOOL "When ON attempt to copy the mod to the sapiens mod directory. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
-set(SAPIENS_MOD_DIRECTORY "" CACHE PATH "The directory sapiens loads mods from. THIS DELETES ALL FILES IN THE TARGET DIRECTORY.")
 
 if (AUTO_COPY_MOD)
-    if (NOT SAPIENS_MOD_DIRECTORY)
-        message(STATUS "No sapiens directory is set, looking for one at default locations.")
+    if ("${SAPIENS_MOD_DIRECTORY}" STREQUAL "")
+        message(STATUS "No Sapiens directory is set, looking for one at default locations.")
         if (WIN32)
             set(_copy_dest "$ENV{APPDATA}\\majicjungle\\sapiens\\mods\\")
             # check if _copy_dest exists
             if (EXISTS ${_copy_dest})
-                message(STATUS "Found sapiens directory at ${_copy_dest}")
-                set(SAPIENS_MOD_DIRECTORY "${_copy_dest}" CACHE PATH "The directory sapiens loads mods from." FORCE)
+                message(STATUS "Found Sapiens directory at ${_copy_dest}")
+                set(SAPIENS_MOD_DIRECTORY "${_copy_dest}" CACHE PATH "The directory Sapiens loads mods from." FORCE)
             else ()
-                message(STATUS "Could not find sapiens directory at ${_copy_dest}")
+                message(STATUS "Could not find Sapiens directory at ${_copy_dest}. Please verify where you installed Sapiens, and manually specify the path")
+            endif ()
+        elseif (UNIX)
+            set(_copy_dest "$ENV{HOME}/.steam/steam/steamapps/compatdata/1060230/pfx/drive_c/users/steamuser/AppData/Roaming/majicjungle/sapiens/mods/")
+            if (EXISTS ${_copy_dest})
+                message(STATUS "Found Sapiens directory at ${_copy_dest}")
+                set(SAPIENS_MOD_DIRECTORY "${_copy_dest}" CACHE PATH "The directory Sapiens loads mods from." FORCE)
+            else ()
+                message(STATUS "Could not find Sapiens directory at ${_copy_dest}. Please verify where you installed Sapiens, and manually specify the path")
             endif ()
         else ()
-            message(STATUS "Auto copy currently only supported on windows.")
+            message(STATUS "Auto copy currently only supported on Windows, macOS and Linux.")
         endif ()
     endif ()
     if (EXISTS ${SAPIENS_MOD_DIRECTORY})
         set(_mod_target_dir "${SAPIENS_MOD_DIRECTORY}/${MOD_ID}")
-        message(STATUS "Mod will be copied from '${_mod_dir}' to '${_mod_dir}'")
+        message(STATUS "Mod will be copied from '${_mod_dir}' to '${_mod_target_dir}'")
         message(WARNING "${_mod_target_dir} will be recursively deleted and recreated if it already exists.")
 
         add_custom_target(copy_mod
@@ -86,8 +129,10 @@ if (AUTO_COPY_MOD)
                 DEPENDS ${MOD_ID}
                 COMMENT "Copying mod to sapiens mod directory.")
 
+
         add_custom_target(run_game
                 COMMAND steam "steam://rungameid/1060230")
+                
         add_dependencies(run_game copy_mod)
     else ()
         message(FATAL_ERROR "Sapiens mod directory not found.")
